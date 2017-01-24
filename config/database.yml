@@ -1,0 +1,39 @@
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: 5
+
+# development:
+#   <<: *default
+#   database: smta-media-server_development
+
+# test:
+#   <<: *default
+#   database: smta-media-server_test
+
+# production:
+#   <<: *default
+#   database: smta-media-server_production
+#   username: smta-media-server
+#   password: <%= ENV['SMTA-MEDIA-SERVER_DATABASE_PASSWORD'] %>
+
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  host: <%= ENV['DB_HOST'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  port : <%= ENV['DB_PORT'] %>
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: <%= ENV['DB_NAME'] %>
+# test:
+#   <<: *default
+#   database: test
+
+production:
+  <<: *default
+  database: <%= ENV['DB_NAME'] %>
