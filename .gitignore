@@ -10,6 +10,9 @@
 # Ignore bundler gems.
 vendor/bundle
 
+# Ignore vendor assets.
+vendor/assets
+
 # Ignore all logfiles and tempfiles.
 !/log/.keep
 /tmp
