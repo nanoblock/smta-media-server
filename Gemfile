@@ -13,3 +13,5 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'fog'
 gem 'aws-sdk', '>= 2.0.0'
 gem 'paperclip'
+
+gem 'unicorn'
